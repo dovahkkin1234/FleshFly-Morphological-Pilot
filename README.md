@@ -1,11 +1,11 @@
-# 🪰 Flesh Fly Pilot Study: Automated Taxonomic Classification
+# Flesh Fly Pilot Study: Automated Taxonomic Classification
 
-## 📌 Project Overview
+## Project Overview
 This pilot study investigates the feasibility of using Deep Learning to identify forensically important flesh fly species (*Sarcophagidae* & *Calliphoridae*) based solely on wing venation patterns.
 
 Current identification methods require invasive genitalia dissection by experts. This project proposes a non-invasive, computer-vision-based alternative using a **Multi-Architecture Ensemble ("The Trinity")**.
 
-## 🧠 The "Trinity" Architecture
+## The "Trinity" Architecture
 The system employs a weighted voting ensemble of three distinct architectures to ensure robustness against field noise (shadows, pins, labels):
 
 1.  **ResNet50 (Baseline):** Structural backbone (Weight: 15%).
@@ -17,7 +17,7 @@ The system employs a weighted voting ensemble of three distinct architectures to
 - **Ensemble Voting**: Weighted soft voting mechanism to maximize accuracy.
 - **Robustness**: Specifically designed to handle "in-the-wild" images with complex backgrounds.
 
-## 📊 Performance & Results
+## Performance & Results
 - **Baseline (ResNet50 Only):** ~0% Accuracy on raw field data (failed to generalize).
 - **Trinity Ensemble:** **90% Accuracy** on raw field data.
 
@@ -27,7 +27,7 @@ The system employs a weighted voting ensemble of three distinct architectures to
 ![Species Distribution](species_distribution.png)
 *Distribution of species in the dataset.*
 
-## 📂 Repository Structure
+## Repository Structure
 ```
 fly_pilot_clean/
 ├── models/                  # Pre-trained model weights (Git LFS)
@@ -45,7 +45,7 @@ fly_pilot_clean/
 └── README.md                # Project documentation
 ```
 
-## 💾 Data Availability
+## Data Availability
 The dataset required to train and evaluate the models is hosted on Google Drive.
 
 [**Download Dataset Here**](https://drive.google.com/file/d/1x1SAYgNPNPFkmnJTR5uwUhJrOeZ-Vo87/view?usp=drive_link)
@@ -58,7 +58,7 @@ The dataset required to train and evaluate the models is hosted on Google Drive.
    fly_pilot_clean/Data/processed8/
    ```
 
-## 🚀 Usage
+## Usage
 
 ### 1. Installation
 Ensure you have Python installed. It is recommended to use a virtual environment.
@@ -89,7 +89,7 @@ python src/train_efficientnet.py
 python src/train_resnet.py
 ```
 
-## 📝 Requirements
+## Requirements
 - Python 3.8+
 - PyTorch >= 2.0.0
 - OpenCV
